@@ -9,8 +9,6 @@ on:
 jobs:
   mirror:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       -
         name: Login to GHCR
