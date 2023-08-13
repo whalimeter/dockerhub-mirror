@@ -12,8 +12,15 @@ jobs:
     permissions:
       contents: write
     steps:
+      -
+        name: Login to GHCR
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - name: alpine
-        uses: github.com/efrecon/gh-action-docker-mirror@main
+        uses: efrecon/gh-action-docker-mirror@main
         with:
           image: alpine
           minver: 3.15
