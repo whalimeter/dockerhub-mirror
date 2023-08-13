@@ -24,4 +24,3 @@ jobs:
         with:
           image: alpine
           minver: 3.15
-          registry: ghcr.io/efrecon
