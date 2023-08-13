@@ -1,0 +1,19 @@
+name: mirror
+
+on:
+  schedule:
+    # Run every sunday at 1:27 UTC
+    - cron: '27 1 * * SUN'
+  workflow_dispatch:
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: alpine
+        uses: github.com/efrecon/gh-action-docker-mirror@main
+        with:
+          image: alpine
+          minver: 3.15
