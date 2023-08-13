@@ -9,6 +9,8 @@ on:
 jobs:
   mirror:
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
     steps:
       -
         name: Login to GHCR
@@ -22,3 +24,5 @@ jobs:
         with:
           image: alpine
           minver: 3.15
+          registry: ghcr.io/efrecon
+
