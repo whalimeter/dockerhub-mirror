@@ -26,9 +26,9 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: alpine
-        uses: ${{ github.repository_owner }}/gh-action-docker-mirror@main
+        uses: whalimeter/gh-action-docker-mirror@main
         with:
           image: alpine
           minver: 3.17
-          registry: ghcr.io/${{ github.repository_owner }}
+          registry: ghcr.io/whalimeter
 
