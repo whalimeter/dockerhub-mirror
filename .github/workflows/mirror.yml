@@ -26,9 +26,9 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: alpine
-        uses: efrecon/gh-action-docker-mirror@main
+        uses: ${{ github.repository_owner }}/gh-action-docker-mirror@main
         with:
           image: alpine
           minver: 3.17
-          registry: ghcr.io/efrecon
+          registry: ghcr.io/${{ github.repository_owner }}
 
